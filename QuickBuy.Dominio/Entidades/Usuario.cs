@@ -4,7 +4,7 @@ using System.Data;
 
 namespace QuickBuy.Dominio.Entidades
 {
-    public class Usuario
+    public class Usuario : Entidade
     {
         private ICollection myProperty;
 
@@ -17,5 +17,9 @@ namespace QuickBuy.Dominio.Entidades
         // Um usuario pode ter nenhum ou muitos pedidos
         public ICollection<Pedido> Pedidos { get ; set ; }
 
+        public override void Validate()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
